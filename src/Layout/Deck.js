@@ -4,6 +4,7 @@ import { Route, Switch, useParams, useRouteMatch, Link, } from "react-router-dom
 import EditDeck from "./EditDeck";
 import DeckStudy from "./DeckStudy";
 import DeckView from "./DeckView"
+import Card from "./Card"
 
 function Deck() {
   const { deckId } = useParams();
@@ -12,14 +13,17 @@ function Deck() {
   return (
     <section>
       <Switch>
-        <Route path={"/decks/:deckId/edit"}>
+        <Route path={`${path}/edit`}>
           <EditDeck />
         </Route>
-        <Route path={"/decks/:deckId/study"}>
+        <Route path={`${path}/study`}>
           <DeckStudy />
         </Route>
-        <Route path={"/decks/:deckId"}>
+        <Route path={`${path}`}>
           <DeckView />
+        </Route>
+        <Route path={`${path}/cards`}>
+          <Card />
         </Route>
       </Switch>
     </section>
