@@ -10,9 +10,8 @@ function DeckStudy() {
     const { path, url } = useRouteMatch(); 
     const history = useHistory();
 
-    console.log('deckId',deckId);
-    // const [cards, setCards] = useState([]);
     const [currentDeck, setCurrentDeck] = useState([]);
+    
     useEffect(() => {    
 
         // const abortController = new AbortController();

@@ -9,6 +9,7 @@ import CardBack from "./CardBack";
 function FlipCard({ cards }) {
 
     const history = useHistory();
+    
     const [currentCard, setCurrentCard] = useState(0);
     const [showBack, setShowBack] = useState(false);
 
@@ -29,12 +30,6 @@ function FlipCard({ cards }) {
             setCurrentCard((currentCard+1)%cards.length);
             setShowBack(false);
         } 
-        
-        
-
-        
-        
-        
   }
 
     if(cards.length>2){
