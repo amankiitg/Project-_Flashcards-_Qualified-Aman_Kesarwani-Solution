@@ -1,11 +1,12 @@
-import React, { useState, useHistory  }  from "react";
+import React, { useState  }  from "react";
+import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
-import { createDeck } from "../utils/api";
 
-function DeckForm({initialFormState}) {
+function DeckForm({initialFormState, deckFunction}) {
 
     const [formData, setFormData] = useState({ ...initialFormState });
 
+    const history = useHistory();
     const handleChange = ({ target }) => {
         setFormData({
             ...formData,
@@ -20,12 +21,12 @@ function DeckForm({initialFormState}) {
 
         // const abortController = new AbortController();
 
-        const response = createDeck(formData);
+        const response = deckFunction(formData);
         const savedData = await response;
         console.log("Saved user!", savedData);
-        //history.push("/");
+        history.push("/");
       };
-  
+
     return (
         <form onSubmit={submitHandler}>
             <div className="form-group">

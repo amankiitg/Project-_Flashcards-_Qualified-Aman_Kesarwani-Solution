@@ -1,6 +1,7 @@
 import React, { useState, useHistory  }  from "react";
 import { Link } from "react-router-dom";
 import DeckForm from "./DeckForm";
+import { createDeck } from "../utils/api";
 
 function CreateDeck() {
 
@@ -20,7 +21,7 @@ function CreateDeck() {
             </nav>
         </div>
         <h2>Create Deck</h2>
-        <DeckForm initialFormState={initialFormState}/>
+        <DeckForm initialFormState={initialFormState} deckFunction={createDeck}/>
         </section>
     )
   }

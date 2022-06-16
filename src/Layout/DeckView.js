@@ -46,8 +46,8 @@ function DeckView() {
       }
     };
 
-    // console.log('Path in deck study', currentDeck.cards);
-    console.log('Cards set', currentDeck.cards);
+    console.log('Path in deck study', path);
+    //console.log('Cards set', currentDeck.cards);
     
 
     if(currentDeck.cards){
