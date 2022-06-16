@@ -7,7 +7,6 @@ function EditDeck() {
 
   const { deckId } = useParams();
   const { path, url } = useRouteMatch(); 
-  const history = useHistory();
 
   const [currentDeck, setCurrentDeck] = useState([]);
 
@@ -16,7 +15,6 @@ function EditDeck() {
       // const abortController = new AbortController();
       readDeck(deckId).then((deckFromAPI) => {
           setCurrentDeck(deckFromAPI);
-          //console.log('Result',deckFromAPI);
       }).catch((error) => {
           if (error.name === "AbortError") {
           // Ignore `AbortError`
@@ -45,7 +43,7 @@ function EditDeck() {
         </section>
         )
     } else{
-        return <p>Loading..</p>
+        return <p>Edit Deck Loading..</p>
     }
     
 }
