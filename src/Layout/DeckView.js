@@ -37,11 +37,14 @@ function DeckView() {
       }
     };
 
-    const handleDelete = async (id) => {
+    const handleDelete = async () => {
       const result = window.confirm("Delete this deck?");
       if (result) {
-        deleteDeck(id).then(() => {
+        deleteDeck(deckId).then(() => {
           history.push("/");  
+        }).catch((error) => {
+          console.log('Could not delete in View model')
+          console.log(error);
         });
       }
     };
