@@ -3,13 +3,15 @@ import { Route, Switch, useParams, useRouteMatch, Link, } from "react-router-dom
 
 function NotEnoughCards({cards = []}){
 
+    const { deckId } = useParams();
+
     return (
         <div>
             <h3>
-                Not enough cards
+                Not enough cards.
             </h3>
-            <p>You need at least 3 cards to study. There are {cards.length} cards in the deck</p>
-            <Link to={`/decks/new`}><button className="btn btn-primary">+ Add Cards</button></Link>
+            <p>You need at least 3 cards to study. There are {cards.length} cards in this deck</p>
+            <Link to={`/decks/${deckId}/cards/new`}><button className="btn btn-primary">+ Add Cards</button></Link>
         </div>
         
     )
