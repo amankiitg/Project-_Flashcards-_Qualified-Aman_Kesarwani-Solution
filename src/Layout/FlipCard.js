@@ -1,5 +1,6 @@
 
 import React, { useState, useEffect }  from "react";
+import { useHistory, Link, useParams  } from "react-router-dom";
 import NotEnoughCards from "./NotEnoughCards";
 import classNames from "../utils/class-names" 
 import CardFront from "./CardFront";
@@ -7,7 +8,7 @@ import CardBack from "./CardBack";
 
 function FlipCard({ cards }) {
 
-    // console.log(cards.length);
+    const history = useHistory();
     const [currentCard, setCurrentCard] = useState(0);
     const [showBack, setShowBack] = useState(false);
 
@@ -16,8 +17,24 @@ function FlipCard({ cards }) {
     }
 
     const handleNext = () => {
-        setCurrentCard((currentCard+1)%cards.length);
-        setShowBack(false);
+        if(currentCard===cards.length-1){
+            const reset = window.confirm("Restart cards?");
+            if(reset) {
+                setCurrentCard(0);
+                setShowBack(false);
+            } else{
+                history.push("/");
+            }
+        } else {
+            setCurrentCard((currentCard+1)%cards.length);
+            setShowBack(false);
+        } 
+        
+        
+
+        
+        
+        
   }
 
     if(cards.length>2){
