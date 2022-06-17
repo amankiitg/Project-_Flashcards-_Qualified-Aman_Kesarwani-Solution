@@ -4,8 +4,7 @@ import { createDeck, readDeck } from "../utils/api";
 import FlipCard from "./FlipCard";
 
 function DeckStudy() {
-    // const params = useParams();
-    // return <p>{JSON.stringify(params)}</p>;
+    
     const { deckId } = useParams();
     const { path, url } = useRouteMatch(); 
     const history = useHistory();
@@ -38,7 +37,6 @@ function DeckStudy() {
                   <nav aria-label="breadcrumb">
                       <ol className="breadcrumb">
                           <li className="breadcrumb-item"><Link to={"/"}>Home</Link></li>
-                          <li className="breadcrumb-item" aria-current="page"><Link to={url}>{currentDeck.name}</Link></li>
                           <li className="breadcrumb-item active" aria-current="page">Study</li>
                       </ol>
                   </nav>

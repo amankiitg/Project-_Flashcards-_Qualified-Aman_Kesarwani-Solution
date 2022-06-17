@@ -25,7 +25,6 @@ function Home() {
 
     return (
         <div>
-            <p>Home</p>
             <Link to={`/decks/new`}><button className="btn btn-secondary">+ Create Deck</button></Link>
             <br />
             <DeckList decks={decks} setDeck={setDeck}/>
