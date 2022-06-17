@@ -5,7 +5,7 @@ import Deck from "./Deck";
 import CreateDeck from "./CreateDeck";
 import Home from "./Home";
 
-import { Route, Switch, useRouteMatch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 
 function Layout() {
   return (

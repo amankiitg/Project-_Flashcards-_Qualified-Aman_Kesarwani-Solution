@@ -1,8 +1,7 @@
 
-import React, { useState, useEffect }  from "react";
-import { useHistory, Link, useParams  } from "react-router-dom";
+import React, { useState }  from "react";
+import { useHistory  } from "react-router-dom";
 import NotEnoughCards from "./NotEnoughCards";
-import classNames from "../utils/class-names" 
 import CardFront from "./CardFront";
 import CardBack from "./CardBack";
 

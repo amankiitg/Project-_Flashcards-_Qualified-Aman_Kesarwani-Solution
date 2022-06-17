@@ -1,5 +1,5 @@
 import React, { useEffect,useState } from "react";
-import { Route, Switch, useParams, useRouteMatch, Link, } from "react-router-dom";
+import { Link, } from "react-router-dom";
 import { listDecks } from "../utils/api";
 import DeckList from "./DeckList"
 

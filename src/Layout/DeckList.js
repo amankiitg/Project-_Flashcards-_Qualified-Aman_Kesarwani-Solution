@@ -1,10 +1,10 @@
 import React from "react";
-import { useHistory, Link, useParams  } from "react-router-dom";
+import { useHistory  } from "react-router-dom";
 import DeckProfile from "./DeckProfile";
 import { deleteDeck, listDecks } from "../utils/api";
 
 
-export const DeckList = ({ decks = [], setDeck={setDeck}}) => {
+export const DeckList = ({ decks = [], setDeck}) => {
   
   const history = useHistory();
     

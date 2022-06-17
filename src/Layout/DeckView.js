@@ -1,6 +1,6 @@
 import React, { useState, useEffect }  from "react";
 import { Link, useParams, useRouteMatch, useHistory} from "react-router-dom";
-import { readDeck, deleteCard, listDecks, deleteDeck } from "../utils/api";
+import { readDeck, deleteCard,  deleteDeck } from "../utils/api";
 import CardProfile from "./CardProfile"
 
 function DeckView() {

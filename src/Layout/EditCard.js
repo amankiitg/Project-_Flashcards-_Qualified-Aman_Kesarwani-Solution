@@ -1,8 +1,7 @@
-import React, { useState, useEffect, useHistory  }  from "react";
+import React, { useState, useEffect }  from "react";
 import { Link, useParams  } from "react-router-dom";
-import CardForm from "./CardForm";
 import { updateCard, readDeck, readCard } from "../utils/api";
-import { useRouteMatch } from "react-router-dom";
+import CardForm from "./CardForm";
 
 function EditCard() {
 

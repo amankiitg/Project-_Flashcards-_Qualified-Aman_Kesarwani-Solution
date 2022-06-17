@@ -1,7 +1,7 @@
 import React from "react";
-import { useHistory, Link, useParams  } from "react-router-dom";
+import { Link  } from "react-router-dom";
 
-export const DeckProfile = ({ deck = {}, handleDelete=handleDelete}) => {
+export const DeckProfile = ({ deck = {}, handleDelete}) => {
   
     return (
         <div className="card my-2 w-75">

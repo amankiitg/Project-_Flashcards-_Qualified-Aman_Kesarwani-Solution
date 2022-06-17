@@ -1,10 +1,9 @@
 import React from "react";
-import { useHistory, Link, useParams, useRouteMatch  } from "react-router-dom";
+import { Link,  useRouteMatch  } from "react-router-dom";
 
-export const CardProfile = ({ card = {}, handleDeleteCard=handleDeleteCard}) => {
+export const CardProfile = ({ card = {}, handleDeleteCard}) => {
 
-    const { path, url } = useRouteMatch(); 
-    const history = useHistory();
+    const { url } = useRouteMatch(); 
   
     return (
         <div className="card my-2 w-75">

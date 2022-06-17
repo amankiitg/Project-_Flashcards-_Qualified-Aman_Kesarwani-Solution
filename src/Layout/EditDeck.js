@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { Link, useParams, useRouteMatch, useHistory} from "react-router-dom";
+import { Link, useParams, useRouteMatch } from "react-router-dom";
 import { updateDeck, readDeck } from "../utils/api";
 import DeckForm from "./DeckForm";
 
 function EditDeck() {
 
   const { deckId } = useParams();
-  const { path, url } = useRouteMatch(); 
+  const {  url } = useRouteMatch(); 
 
   const [currentDeck, setCurrentDeck] = useState([]);
 

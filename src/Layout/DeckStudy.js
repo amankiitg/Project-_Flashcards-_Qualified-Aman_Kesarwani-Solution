@@ -1,14 +1,12 @@
 import React, { useState, useEffect }  from "react";
-import { Link, useParams, useRouteMatch, useHistory} from "react-router-dom";
-import { createDeck, readDeck } from "../utils/api";
+import { Link, useParams } from "react-router-dom";
+import {  readDeck } from "../utils/api";
 import FlipCard from "./FlipCard";
 
 function DeckStudy() {
     
     const { deckId } = useParams();
-    const { path, url } = useRouteMatch(); 
-    const history = useHistory();
-
+   
     const [currentDeck, setCurrentDeck] = useState([]);
     
     useEffect(() => {    
