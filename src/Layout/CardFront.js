@@ -1,3 +1,4 @@
+import React from "react";
 
 function CardFront({currentCard, cards, handleClick}) {
     return (

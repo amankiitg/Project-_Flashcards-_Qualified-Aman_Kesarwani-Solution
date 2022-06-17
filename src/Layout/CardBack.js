@@ -1,3 +1,4 @@
+import React from "react";
 
 function CardBack({currentCard, cards, handleClick, handleNext}) {
     return (
